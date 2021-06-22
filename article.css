@@ -1,0 +1,17 @@
+.galerie bandeau {
+    height: 120px; 
+    background: gray;
+}
+h2{
+    text-align: center;
+    color: black
+}
+h4 {
+    text-align: center;
+    color: gray
+}
+p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
