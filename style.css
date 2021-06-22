@@ -1,7 +1,7 @@
 @charset "utf-8";
 nav { 
 	position:fixed;
-	top:0; left:0; width:34%; 	
+	top:0; left:0; width:20%; 	
 	height:100%; 
 	background-color:gray;
 	color:#fff;
@@ -73,5 +73,5 @@ div.menu h3 {
     min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-
+	column-gap: 30px;
 }
