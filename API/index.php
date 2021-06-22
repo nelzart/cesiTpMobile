@@ -35,7 +35,7 @@ function getArticlesbyCategorie($catId){
 
 function getArticlesbyTitre($titre){
         global $conn;
-        $query = "SELECT * FROM article where Art_Id LIKE '%".$titre."%'";
+        $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%'";
         $response = array();
         $result = mysqli_query($conn, $query);
         while($row = mysqli_fetch_array($result))
