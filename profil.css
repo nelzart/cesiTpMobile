@@ -35,3 +35,22 @@ nav .menu h3 .nav-link{
 	text-decoration: none;
 	color: #444444;
 }
+.galerie #photo{
+    width : 150px; height : 150px;
+    border: none;
+    -moz-border-radius : 75px;
+    -webkit-border-radius : 75px;
+    border-radius : 75px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+.galerie h2{
+    text-align: center;
+    color: black
+}
+.galerie p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}

@@ -35,3 +35,20 @@ nav .menu h3 .nav-link{
 	text-decoration: none;
 	color: #444444;
 }
+.galerie #bandeau {
+    height: 120px; 
+    background: gray;
+}
+.galerie h2{
+    text-align: center;
+    color: black
+}
+.galerie h4 {
+    text-align: center;
+    color: gray
+}
+.galerie p{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
