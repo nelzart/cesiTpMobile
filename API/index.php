@@ -33,10 +33,6 @@ function getArticlesbyCategorie($catId){
 }
 
 function getArticlesbyTitre($titre){
-<<<<<<< HEAD
-=======
-
->>>>>>> 3b741d1e56e6b06fd0c4def58abb8a3c86ffb390
         global $conn;
         $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%'";
         $response = array();
@@ -47,10 +43,6 @@ function getArticlesbyTitre($titre){
         }
         header('Content-Type: application/json');
         echo json_encode($response, JSON_PRETTY_PRINT);
-<<<<<<< HEAD
-=======
-
->>>>>>> 3b741d1e56e6b06fd0c4def58abb8a3c86ffb390
 }
 
 function getArticleById($id){
