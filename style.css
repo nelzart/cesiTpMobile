@@ -200,4 +200,11 @@ label {
 	flex-wrap: wrap;
 	background-color: black;
 }
-
+.contenu {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1024px;
+	display: flex;
+	column-gap: 30px;
+	flex-wrap: wrap;
+}
