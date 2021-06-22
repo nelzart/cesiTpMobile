@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6b701fad6c29651aea07feeabd27757c023f2615
 <?php
 
 include("db_connect.php");
@@ -33,11 +37,35 @@ function getArticlesbyCategorie($catId){
 }
 
 function getArticlesbyTitre($titre){
+<<<<<<< HEAD
     
+=======
+        global $conn;
+        $query = "SELECT * FROM article where Art_Id LIKE '%".$titre."%'";
+        $response = array();
+        $result = mysqli_query($conn, $query);
+        while($row = mysqli_fetch_array($result))
+        {
+                $response[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($response, JSON_PRETTY_PRINT);
+>>>>>>> 6b701fad6c29651aea07feeabd27757c023f2615
 }
 
 function getArticleById($id){
-
+        global $conn;
+        $query = "SELECT * FROM article where Art_Id=".$id;
+        $response = array();
+        $result = mysqli_query($conn, $query);
+        while($row = mysqli_fetch_array($result))
+        {
+                $response[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($response, JSON_PRETTY_PRINT);
+    
+    
 }
 
 function addArticle(){
@@ -89,22 +117,22 @@ function updateArticle($id){
                 $Categorie_id = $decoded['Cat_Id'];
                
 
-    $query="UPDATE article SET Art_Titre =?, Art_Contenu=?, Art_SousTitre=? WHERE Cat_Id=?";
-    mysqli_stmt_bind_param($query, "sssi", $Article_titre, $Article_Contenu, $Article_SousTitre, $Categorie_id)
+    $query= mysqli_prepare($conn, "UPDATE article SET Art_Titre =?, Art_Contenu=?, Art_SousTitre=? WHERE Cat_Id=?");
+    mysqli_stmt_bind_param($query, "sssi", $Article_titre, $Article_Contenu, $Article_SousTitre, $Categorie_id);
 
     if($conn)
      {
-             mysqli_stmt_execute($query);
+        mysqli_stmt_execute($query);
             $response=array(
                     'status' => 1,
-                    'status_message' =>'capteur mis a jour avec succes.'
+                    'status_message' =>'Article mis a jour avec succes.'
              );
     }
     else
      {
             $response=array(
                     'status' => 0,
-                    'status_message' =>'Echec de la mise à jour du capteur: '. mysqli_error($conn)
+                    'status_message' =>'Echec de la mise à jour du article. '
              );
 
      }
@@ -117,7 +145,9 @@ function updateArticle($id){
 function deleteArticle($id){
 
     global $conn;
-    $query = "DELETE FROM article WHERE Art_Id=".$id;
+    $query = mysqli_prepare($conn, "DELETE FROM articles WHERE Art_Id = ?");
+    mysqli_stmt_bind_param($query, "i", $id)
+
     if(mysqli_query($conn, $query))
     {
             $response=array(
