@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 6b701fad6c29651aea07feeabd27757c023f2615
 <?php
 
 include("db_connect.php");
@@ -37,9 +33,6 @@ function getArticlesbyCategorie($catId){
 }
 
 function getArticlesbyTitre($titre){
-<<<<<<< HEAD
-    
-=======
         global $conn;
         $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%'";
         $response = array();
@@ -50,7 +43,6 @@ function getArticlesbyTitre($titre){
         }
         header('Content-Type: application/json');
         echo json_encode($response, JSON_PRETTY_PRINT);
->>>>>>> 6b701fad6c29651aea07feeabd27757c023f2615
 }
 
 function getArticleById($id){
@@ -146,9 +138,9 @@ function deleteArticle($id){
 
     global $conn;
     $query = mysqli_prepare($conn, "DELETE FROM articles WHERE Art_Id = ?");
-    mysqli_stmt_bind_param($query, "i", $id)
+    mysqli_stmt_bind_param($query, "i", $id);
 
-    if(mysqli_query($conn, $query))
+    if($conn)
     {
             $response=array(
                     'status' => 1,
