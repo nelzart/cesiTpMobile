@@ -4,10 +4,31 @@ include("db_connect.php");
 $request_method = $_SERVER['REQUEST_METHOD'];
 
 function getArticlesAll(){
+    global $conn;
+    $query = "SELECT * FROM article";
+    $response = array();
+    $result = mysqli_query($conn, $query);
+    while($row = mysqli_fetch_array($result))
+    {
+            $response[] = $row;
+    }
+    header('Content-Type: application/json');
+    echo json_encode($response, JSON_PRETTY_PRINT);
 
 }
 
-function getArticlesbyCategorie(){
+function getArticlesbyCategorie($catId){
+    global $conn;
+    $query = "SELECT * FROM article WHERE Cat_Id=".$catId;
+    $response = array();
+    $result = mysqli_query($conn, $query);
+    while($row = mysqli_fetch_array($result))
+    {
+            $response[] = $row;
+    }
+    header('Content-Type: application/json');
+    echo json_encode($response, JSON_PRETTY_PRINT);
+
 
 }
 
@@ -58,9 +79,59 @@ function addArticle(){
 
 function updateArticle($id){
 
+    global $conn;
+    $content = file_get_contents("php://input");
+    $decoded = json_decode($content, true);
+
+                $Article_titre = $decoded['Art_Titre'];
+                $Article_Contenu = $decoded['Art_Contenu'];
+                $Article_SousTitre = $decoded['Art_SousTitre'];
+                $Categorie_id = $decoded['Cat_Id'];
+               
+
+    $query="UPDATE article SET Art_Titre=".$Article_titre.", Art_Contenu=".$Article_Contenu.", Art_SousTitre='".$Article_SousTitre."', Cat_Id=".?."' WHERE Art_Id=".$id;
+
+    if(mysqli_query($conn, $query))
+     {
+            $response=array(
+                    'status' => 1,
+                    'status_message' =>'capteur mis a jour avec succes.'
+             );
+    }
+    else
+     {
+            $response=array(
+                    'status' => 0,
+                    'status_message' =>'Echec de la mise à jour du capteur: '. mysqli_error($conn)
+             );
+
+     }
+
+    header('Content-Type: application/json');
+    echo json_encode($response);
+
 }
 
 function deleteArticle($id){
+
+    global $conn;
+    $query = "DELETE FROM article WHERE Art_Id=".$id;
+    if(mysqli_query($conn, $query))
+    {
+            $response=array(
+                    'status' => 1,
+                    'status_message' =>'Capteur supprimé avec succes.'
+             );
+     }
+     else
+    {
+            $response=array(
+                    'status' => 0,
+                    'status_message' =>'La suppression du capteur a échoué: '. mysqli_error($conn)
+             );
+     }
+    header('Content-Type: application/json');
+    echo json_encode($response);
 
 
 }
