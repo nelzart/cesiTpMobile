@@ -135,6 +135,10 @@ div.menu h3 {
 	  left: -100%;
 	}
   }
+  input,
+label {
+    margin: .4rem 0;
+}
 .card {
 	display: flex;
 	width: 320px;
