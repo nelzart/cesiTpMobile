@@ -7,7 +7,6 @@ body {
 h1 {
 	color: #fff;
 	font-variant: small-caps;
-	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
 }
 nav { 
@@ -158,6 +157,7 @@ label {
 	position: absolute;
 	width: 320px;
 	height: 240px;
+	border-radius: 5%;
 	overflow: hidden;
 }
 .card .sub-photo div {
@@ -166,18 +166,23 @@ label {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	transition: all 1500ms linear;
 }
-.card .sub-photo div:hover {
-	transform: scale(1.2);
-	transition: all 1000ms linear;
+
+.sub-text {
+	position: absolute;
 }
-h2 {
-	color: #fff;
+.sub-text h2 {
+	color: white;
     font-variant: small-caps;
-	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
     margin-top: 10px;
+    margin-left: 10px;
+    z-index: 5;
+}
+.sub-text p {
+	color: white;
+	font-size: 15px;
+    margin-top: -20px;
     margin-left: 10px;
     z-index: 5;
 }
@@ -185,7 +190,7 @@ h2 {
 .galerie {
 	position: absolute;
     top: 0;
-    left: 34%;
+    left: 14%;
     right: 0;
     min-height: 100%;
     overflow-x: hidden;
@@ -193,5 +198,6 @@ h2 {
 	display: flex;
     column-gap: 30px;
 	flex-wrap: wrap;
+	background-color: black;
 }
 
