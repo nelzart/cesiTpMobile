@@ -63,7 +63,7 @@ div.menu h3 {
 	font-family: "Raleway", sans-serif;
 	font-size: 16px;
 	font-weight: 700;
-	color: #fff;
+	color: gray;
 	white-space: nowrap;
 	transition: 0.3s;
   }
@@ -88,7 +88,7 @@ div.menu h3 {
 	z-index: 99;
 	opacity: 0;
 	visibility: hidden;
-	background: #fff;
+	background: gray;
 	box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 	transition: 0.3s;
   }
