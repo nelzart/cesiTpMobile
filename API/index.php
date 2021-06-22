@@ -89,22 +89,22 @@ function updateArticle($id){
                 $Categorie_id = $decoded['Cat_Id'];
                
 
-    $query="UPDATE article SET Art_Titre =?, Art_Contenu=?, Art_SousTitre=? WHERE Cat_Id=?";
-    mysqli_stmt_bind_param($query, "sssi", $Article_titre, $Article_Contenu, $Article_SousTitre, $Categorie_id)
+    $query= mysqli_prepare($conn, "UPDATE article SET Art_Titre =?, Art_Contenu=?, Art_SousTitre=? WHERE Cat_Id=?");
+    mysqli_stmt_bind_param($query, "sssi", $Article_titre, $Article_Contenu, $Article_SousTitre, $Categorie_id);
 
     if($conn)
      {
-             mysqli_stmt_execute($query);
+        mysqli_stmt_execute($query);
             $response=array(
                     'status' => 1,
-                    'status_message' =>'capteur mis a jour avec succes.'
+                    'status_message' =>'Article mis a jour avec succes.'
              );
     }
     else
      {
             $response=array(
                     'status' => 0,
-                    'status_message' =>'Echec de la mise à jour du capteur: '. mysqli_error($conn)
+                    'status_message' =>'Echec de la mise à jour du article. '
              );
 
      }
@@ -117,7 +117,7 @@ function updateArticle($id){
 function deleteArticle($id){
 
     global $conn;
-    $query = "DELETE FROM article WHERE Art_Id=".$id;
+    $query = mysqli_prepare($conn, "DELETE FROM Capteur WHERE Cpt_Id = ?");
     if(mysqli_query($conn, $query))
     {
             $response=array(
