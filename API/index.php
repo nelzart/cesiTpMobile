@@ -5,7 +5,7 @@ $request_method = $_SERVER['REQUEST_METHOD'];
 
 function getArticlesAll(){
     global $conn;
-    $query = "SELECT * FROM article";
+    $query = "SELECT * FROM article ORDER BY Art_Maj DESC";
     $response = array();
     $result = mysqli_query($conn, $query);
     while($row = mysqli_fetch_array($result))
@@ -19,7 +19,7 @@ function getArticlesAll(){
 
 function getArticlesbyCategorie($catId){
     global $conn;
-    $query = "SELECT * FROM article WHERE Cat_Id=".$catId;
+    $query = "SELECT * FROM article WHERE Cat_Id=".$catId."ORDER BY Art_Maj DESC";
     $response = array();
     $result = mysqli_query($conn, $query);
     while($row = mysqli_fetch_array($result))
@@ -34,7 +34,7 @@ function getArticlesbyCategorie($catId){
 
 function getArticlesbyTitre($titre){
         global $conn;
-        $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%'";
+        $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%' ORDER BY Art_Maj DESC";
         $response = array();
         $result = mysqli_query($conn, $query);
         while($row = mysqli_fetch_array($result))
