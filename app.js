@@ -11,7 +11,8 @@
 //affichage de message du jour
     if((d.getHours() <= 12) && (d.getHours() >= 8 ) && (d.getMinutes() >= 0 )) {
         document.getElementById('message').innerHTML += message = "<b>Bonjour, </b>" +connUserName
-    } if ((d.getHours() >= 13 ) && (d.getMinutes() >= 0 )) {
+    } 
+    if ((d.getHours() >= 13 ) && (d.getHours() < 20 ) && (d.getMinutes() >= 0 )) {
         document.getElementById('message').innerHTML += message = "<b>Bon après-midi, </b>" +connUserName
     }
     if ((d.getHours() >= 20 ) && (d.getMinutes() >= 0 )) {
