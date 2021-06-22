@@ -28,13 +28,13 @@ div.menu h3 {
 	margin-top:20px;
 }
 .card {
-	position: relative;
-	display: inline-block;
+	display: flex;
 	width: 320px;
 	height: 300px;
 	z-index: 100;
 	overflow: hidden;
 	vertical-align: top;
+    border-radius: 5%;
 }
 
 .card .sub-photo {
@@ -55,20 +55,16 @@ div.menu h3 {
 	transform: scale(1.2);
 	transition: all 1000ms linear;
 }
-.sub-text {
-	position: relative;
-	color: #000000;
-	bottom: -240px;
+h2 {
+	color: #fff;
+    font-variant: small-caps;
 	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
+	font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 5;
 }
-.sub-text2 {
-	position: relative;
-	color: #000000;
-	bottom: -310px;
-	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
-}
+
 .galerie {
 	position: absolute;
     top: 0;
@@ -81,3 +77,4 @@ div.menu h3 {
     column-gap: 30px;
 	flex-wrap: wrap;
 }
+
