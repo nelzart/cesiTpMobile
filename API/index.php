@@ -89,10 +89,15 @@ function updateArticle($id){
                 $Categorie_id = $decoded['Cat_Id'];
                
 
-    $query="UPDATE article SET Art_Titre=".$Article_titre.", Art_Contenu=".$Article_Contenu.", Art_SousTitre='".$Article_SousTitre."', Cat_Id=".$Categorie_id." WHERE Art_Id=".$id;
 
-    if(mysqli_query($conn, $query))
+
+    $query="UPDATE article SET Art_Titre =?, Art_Contenu=?, Art_SousTitre=? WHERE Cat_Id=?";
+    mysqli_stmt_bind_param($query, "sssi", $Article_titre, $Article_Contenu, $Article_SousTitre, $Categorie_id)
+
+
+    if($conn)
      {
+             mysqli_stmt_execute($query);
             $response=array(
                     'status' => 1,
                     'status_message' =>'capteur mis a jour avec succes.'
