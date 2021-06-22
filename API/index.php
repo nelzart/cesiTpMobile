@@ -33,8 +33,12 @@ function getArticlesbyCategorie($catId){
 }
 
 function getArticlesbyTitre($titre){
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b741d1e56e6b06fd0c4def58abb8a3c86ffb390
         global $conn;
-        $query = "SELECT * FROM article where Art_Id LIKE '%".$titre."%'";
+        $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%'";
         $response = array();
         $result = mysqli_query($conn, $query);
         while($row = mysqli_fetch_array($result))
@@ -43,6 +47,10 @@ function getArticlesbyTitre($titre){
         }
         header('Content-Type: application/json');
         echo json_encode($response, JSON_PRETTY_PRINT);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3b741d1e56e6b06fd0c4def58abb8a3c86ffb390
 }
 
 function getArticleById($id){
