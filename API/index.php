@@ -151,7 +151,7 @@ function deleteArticle($id){
     {
             $response=array(
                     'status' => 0,
-                    'status_message' =>'La suppression du capteur a échoué: '. mysqli_error($conn)
+                    'status_message' =>'La suppression du capteur a échoué: '
              );
      }
     header('Content-Type: application/json');
