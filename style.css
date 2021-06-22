@@ -1,8 +1,12 @@
-@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
 h1 {
 	color: #fff;
 	font-variant: small-caps;
-	font-family: 'Roboto', sans-serif;
 	text-decoration: none;
 }
 nav { 
@@ -33,49 +37,6 @@ div.menu h3 {
 	position:relative; 
 	margin-top:20px;
 }
-#header {
-	transition: all 0.5s;
-	z-index: 997;
-	transition: all 0.5s;
-	padding: 24px 0;
-	background: rgba(103, 176, 209, 0.8);
-  }
-  
-  #header.header-transparent {
-	background: transparent;
-  }
-  
-  #header.header-scrolled {
-	background: rgba(55, 142, 181, 0.9);
-	padding: 12px;
-  }
-  
-  #header .logo h1 {
-	font-size: 24px;
-	margin: 0;
-	line-height: 1;
-	font-weight: 700;
-	letter-spacing: 1px;
-	font-family: "Poppins", sans-serif;
-	text-transform: uppercase;
-  }
-  
-  #header .logo h1 a, #header .logo h1 a:hover {
-	color: #fff;
-	text-decoration: none;
-  }
-  
-  #header .logo img {
-	padding: 0;
-	margin: 0;
-	max-height: 40px;
-  }
-  
-  @media (max-width: 768px) {
-	#header.header-scrolled {
-	  padding: 15px 0;
-	}
-  }
   .navbar {
 	padding: 0;
   }
@@ -101,7 +62,7 @@ div.menu h3 {
 	font-family: "Raleway", sans-serif;
 	font-size: 16px;
 	font-weight: 700;
-	color: #fff;
+	color: gray;
 	white-space: nowrap;
 	transition: 0.3s;
   }
@@ -126,7 +87,7 @@ div.menu h3 {
 	z-index: 99;
 	opacity: 0;
 	visibility: hidden;
-	background: #fff;
+	background: gray;
 	box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 	transition: 0.3s;
   }
@@ -178,6 +139,10 @@ div.menu h3 {
 	  left: -100%;
 	}
   }
+  input,
+label {
+    margin: .4rem 0;
+}
 .card {
 	display: flex;
 	width: 320px;
@@ -192,6 +157,7 @@ div.menu h3 {
 	position: absolute;
 	width: 320px;
 	height: 240px;
+	border-radius: 5%;
 	overflow: hidden;
 }
 .card .sub-photo div {
@@ -200,18 +166,23 @@ div.menu h3 {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	transition: all 1500ms linear;
 }
-.card .sub-photo div:hover {
-	transform: scale(1.2);
-	transition: all 1000ms linear;
+
+.sub-text {
+	position: absolute;
 }
-h2 {
-	color: #fff;
+.sub-text h2 {
+	color: white;
     font-variant: small-caps;
-	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
     margin-top: 10px;
+    margin-left: 10px;
+    z-index: 5;
+}
+.sub-text p {
+	color: white;
+	font-size: 15px;
+    margin-top: -20px;
     margin-left: 10px;
     z-index: 5;
 }
@@ -219,7 +190,7 @@ h2 {
 .galerie {
 	position: absolute;
     top: 0;
-    left: 34%;
+    left: 14%;
     right: 0;
     min-height: 100%;
     overflow-x: hidden;
@@ -227,5 +198,6 @@ h2 {
 	display: flex;
     column-gap: 30px;
 	flex-wrap: wrap;
+	background-color: black;
 }
 
