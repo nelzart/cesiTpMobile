@@ -37,7 +37,18 @@ function getArticlesbyTitre($titre){
 }
 
 function getArticleById($id){
-
+        global $conn;
+        $query = "SELECT * FROM article where Art_Id=".$id;
+        $response = array();
+        $result = mysqli_query($conn, $query);
+        while($row = mysqli_fetch_array($result))
+        {
+                $response[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($response, JSON_PRETTY_PRINT);
+    
+    
 }
 
 function addArticle(){
