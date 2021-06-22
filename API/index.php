@@ -89,7 +89,7 @@ function updateArticle($id){
                 $Categorie_id = $decoded['Cat_Id'];
                
 
-    $query="UPDATE article SET Art_Titre=".$Article_titre.", Art_Contenu=".$Article_Contenu.", Art_SousTitre='".$Article_SousTitre."', Cat_Id=".?."' WHERE Art_Id=".$id;
+    $query="UPDATE article SET Art_Titre=".$Article_titre.", Art_Contenu=".$Article_Contenu.", Art_SousTitre='".$Article_SousTitre."', Cat_Id=".$Categorie_id." WHERE Art_Id=".$id;
 
     if(mysqli_query($conn, $query))
      {
