@@ -2,35 +2,37 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
 <link rel="stylesheet" href="style.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 <title> Blog des DI </title>
 </head>
 
 <body>
 
-<nav>
-  <div id="hour"></div>
-  <div id="message"></div>
-  <div class="menu">
-			<h3><a class="nav-link" href="#">HOMEPAGE</a></h3>
-			<h3><a class="nav-link" href="">CRER UN ARTICLE</a></h3>
-			<h3><a class="nav-link" href="#">MON PROFIL</a></h3>
+<div class="row">
+	<nav class="col s2">
+		<div id="hour"></div>
+		<div id="message"></div>
+		<div class="menu">
+			<h5><a class="nav-link" href="#">HOMEPAGE</a></h5>
+			<h5><a class="nav-link" href="">CRER UN ARTICLE</a></h5>
+			<h5><a class="nav-link" href="#">MON PROFIL</a></h3>
+		</div>
+	</nav>
+	<div class="col s9 offset-s1">
+		<span id="myCategory">
+			<a class="active" href="">Tout voir</a>
+			<a class="nonActive" href="">Technologie</a>
+			<a class="nonActive" href="">Humour</a>
+			<a class="nonActive" href="">Développement</a>
+			<a class="nonActive" href="">Réseau</a>
+			<div class="input-field col s3">
+				<input placeholder="Rechercher" id="site-search" type="search">
+			</div>
+		</span>
 	</div>
-</nav>
-
-<div id="category-search">
-	<ul>
-		<li><a class="active" href="">Tout voir</a></li>
-		<li><a class="nonActive" href="">Technologie</a></li>
-		<li><a class="nonActive" href="">Humour</a></li>
-		<li><a class="nonActive" href="">Développement</a></li>
-		<li><a class="nonActive" href="">Réseau</a></li>
-		<input type="search" id="site-search" name="q"
-		   aria-label="Search through site content">
-		<button>Recherche</button>
-	</ul>
 </div>
 
 <div class="galerie">
@@ -54,7 +56,7 @@
 </div>
 		</div>
 		<div class="card">
-			<div class="sub-photo"> <a href="">
+			<div class="materialboxed"> <a href="">
 				<div style="background-image: url('img/panda.jpg')" alt="tableau"></div>
 				</a> </div>
 			<div class="sub-text">
@@ -91,7 +93,7 @@
 		</div>
 		</div>
   </div>
-
+</div>
 </body>
 </html>
 
@@ -104,4 +106,6 @@ git commit -a -m "comment" //on ajoute et enregistre les modifications
 
 git push ----> 
 
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="app.js"></script>

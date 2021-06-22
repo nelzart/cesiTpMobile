@@ -1,8 +1,6 @@
 body {
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-	display: flex;
+	margin: 10;
+	padding: 10;
 	color: #444444;
 }
 
@@ -12,6 +10,7 @@ nav {
 	height: 100vh;
 	width: 15vw;
 	padding: 15px;
+	color: #444444;
 }
 
 nav #hour{
@@ -24,50 +23,67 @@ nav #message {
 	font-size: 1em;
 }
 
-nav .menu{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-}
-
-nav .menu h3 .nav-link{
+nav .menu h5 .nav-link{
 	text-decoration: none;
 	color: #444444;
 }
 
-
-
+/* ===================================================================================== */
 /* Corps du site */
-#category-search {
+
+#myCategory {
 	display: flex;
-	width: 100vw;
-	height: 8vh;
-	flex-direction: row;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: flex-start;
+}
+.row .col.offset-s1 {
+    padding-top: 15px;
 }
 
-#category-search ul{
-	display: flex;
-	justify-content: space-around;
-	color: #444444;
+.input-field {
+	position: static;
+	border-radius: 5px;
+	padding: 0px;
+	background-color: #D9D9D9;
 }
 
-#category-search ul li{
-	display: flex;
-	justify-content: center;
-	color: #444444;
-	margin: 0px 50px 0px 50px;
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea
+{
+	border-bottom: 0px solid #9e9e9e;
+	background-color: #D9D9D9;
+}
+.input-field input[type=search] {
+    display: block;
+    line-height: inherit;
+    /* -webkit-transition: .3s background-color; */
+    /* transition: .3s background-color; */
 }
 
-#category-search li a{
-	color: #444444;
-	text-decoration: none;
+input {
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, red);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
 }
-
 .active{
-	background-color: #00B1FF;
+	background-color: #00B1FF;	
 	padding: 10px;
 	border-radius: 50px;
 	font-weight: bold;
@@ -76,6 +92,7 @@ nav .menu h3 .nav-link{
 .nonActive{
 	padding: 10px;
 	border-radius: 50px;
+	color: #444444;
 	font-weight: bold;
 } 
 
