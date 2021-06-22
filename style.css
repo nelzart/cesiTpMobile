@@ -205,4 +205,6 @@ label {
 	margin-right: auto;
 	width: 1024px;
 	display: flex;
+	column-gap: 30px;
+	flex-wrap: wrap;
 }
