@@ -19,7 +19,7 @@ function getArticlesAll(){
 
 function getArticlesbyCategorie($catId){
     global $conn;
-    $query = "SELECT * FROM article WHERE Cat_Id=".$catId."ORDER BY Art_Maj DESC";
+    $query = "SELECT * FROM article WHERE Cat_Id=".$catId." ORDER BY Art_Maj DESC";
     $response = array();
     $result = mysqli_query($conn, $query);
     while($row = mysqli_fetch_array($result))
@@ -172,7 +172,7 @@ switch($request_method)
 
                         if(!empty($_GET["id"]))  //obtenir un article par id
                         {
-                                $id=intval($_GET["Art_Id"]);
+                                $id=intval($_GET["id"]);
                                 getArticleById($id);
                         }
                         else if(!empty($_GET["Art_Titre"]))  //obtenir un article par Titre
@@ -182,7 +182,7 @@ switch($request_method)
                         }
                         else if(!empty($_GET["Cat_Id"]))  //obtenir un article par catégorie
                         {       
-                                $catId=$_GET["Cat_Id"];
+                                $catId = intval($_GET["Cat_Id"]);
                                 getArticlesByCategorie($catId);
                         }
                         else  //obtenir tous les articles
