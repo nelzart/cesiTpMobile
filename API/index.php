@@ -5,7 +5,7 @@ $request_method = $_SERVER['REQUEST_METHOD'];
 
 function getArticlesAll(){
     global $conn;
-    $query = "SELECT * FROM article";
+    $query = "SELECT * FROM article ORDER BY Art_Maj DESC";
     $response = array();
     $result = mysqli_query($conn, $query);
     while($row = mysqli_fetch_array($result))
@@ -19,7 +19,7 @@ function getArticlesAll(){
 
 function getArticlesbyCategorie($catId){
     global $conn;
-    $query = "SELECT * FROM article WHERE Cat_Id=".$catId;
+    $query = "SELECT * FROM article WHERE Cat_Id=".$catId."ORDER BY Art_Maj DESC";
     $response = array();
     $result = mysqli_query($conn, $query);
     while($row = mysqli_fetch_array($result))
@@ -34,7 +34,7 @@ function getArticlesbyCategorie($catId){
 
 function getArticlesbyTitre($titre){
         global $conn;
-        $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%'";
+        $query = "SELECT * FROM article where Art_Titre LIKE '%".$titre."%' ORDER BY Art_Maj DESC";
         $response = array();
         $result = mysqli_query($conn, $query);
         while($row = mysqli_fetch_array($result))
@@ -137,21 +137,21 @@ function updateArticle($id){
 function deleteArticle($id){
 
     global $conn;
-    $query = mysqli_prepare($conn, "DELETE FROM articles WHERE Art_Id = ?");
+    $query = mysqli_prepare($conn, "DELETE FROM article WHERE Art_Id = ?");
     mysqli_stmt_bind_param($query, "i", $id);
 
     if($conn)
     {
             $response=array(
                     'status' => 1,
-                    'status_message' =>'Capteur supprimé avec succes.'
+                    'status_message' =>'Capteur supprimé avec succès.'
              );
      }
      else
     {
             $response=array(
                     'status' => 0,
-                    'status_message' =>'La suppression du capteur a échoué: '. mysqli_error($conn)
+                    'status_message' =>'La suppression du capteur a échoué: '
              );
      }
     header('Content-Type: application/json');
