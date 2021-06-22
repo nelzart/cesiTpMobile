@@ -13,15 +13,19 @@ nav div.menu {
 	margin-top:20px;
 }
 nav div.menu * { 
-	color:#fff; text-decoration: none;
+	color:#fff; 
+	text-decoration: none;
 }
 
 nav div.menu h3::before { 
-	color:#fff; text-decoration: none;
+	color:#fff; 
+	text-decoration: none;
 }
 
 div.menu h3 {
-	margin:0; position:relative; margin-top:20px;
+	margin:0; 
+	position:relative; 
+	margin-top:20px;
 }
 .card {
 	position: relative;
@@ -73,5 +77,7 @@ div.menu h3 {
     min-height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
-	column-gap: 30px;
+	display: flex;
+    column-gap: 30px;
+	flex-wrap: wrap;
 }
