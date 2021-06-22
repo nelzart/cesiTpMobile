@@ -7,3 +7,5 @@ let fullDate = date+' </br> '+hours;
 console.log(fullDate);
 
 document.getElementById('hour').innerHTML += fullDate;
+
+let 
