@@ -35,3 +35,50 @@ nav .menu h3 .nav-link{
 	text-decoration: none;
 	color: #444444;
 }
+
+
+
+/* Corps du site */
+#category-search {
+	display: flex;
+	width: 100vw;
+	height: 8vh;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#category-search ul{
+	display: flex;
+	justify-content: space-around;
+	color: #444444;
+}
+
+#category-search ul li{
+	display: flex;
+	justify-content: center;
+	color: #444444;
+	margin: 0px 50px 0px 50px;
+}
+
+#category-search li a{
+	color: #444444;
+	text-decoration: none;
+}
+
+.active{
+	background-color: #00B1FF;
+	padding: 10px;
+	border-radius: 50px;
+	font-weight: bold;
+	color: rgb(255, 255, 255) !important;
+} 
+.nonActive{
+	padding: 10px;
+	border-radius: 50px;
+	font-weight: bold;
+} 
+
+.galerie{
+	display: none;
+}
