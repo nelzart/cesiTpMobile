@@ -35,7 +35,7 @@ nav .menu h3 .nav-link{
 	text-decoration: none;
 	color: #444444;
 }
-.galerie photo{
+.galerie #photo{
     width : 150px; height : 150px;
     border: none;
     -moz-border-radius : 75px;
