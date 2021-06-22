@@ -7,15 +7,15 @@ function getArticlesAll(){
 
 }
 
-function getArticlesbyCategory(){
+function getArticlesbyCategorie(){
 
 }
 
-function getArticlesbyTitle(){
+function getArticlesbyTitre($titre){
     
 }
 
-function getArticles3Lasts($id){
+function getArticleById($id){
 
 }
 
@@ -36,14 +36,24 @@ switch($request_method)
 
                 case 'GET':
 
-                        if(!empty($_GET["id"]))  //obtenir un capteur par id
+                        if(!empty($_GET["id"]))  //obtenir un article par id
                         {
-                                $id=intval($_GET["id"]);
-                                getCapteurById($id);
+                                $id=intval($_GET["Art_Id"]);
+                                getArticleById($id);
                         }
-                        else  //obtenir tous les capteurs
+                        else if(!empty($_GET["Art_Titre"]))  //obtenir un article par Titre
+                        {       
+                                $titre=$_GET["Art_Titre"];
+                                getArticlesByTitre($titre);
+                        }
+                        else if(!empty($_GET["Cat_Id"]))  //obtenir un article par catégorie
+                        {       
+                                $catId=$_GET["Cat_Id"];
+                                getArticlesByCategorie($catId);
+                        }
+                        else  //obtenir tous les articles
                         {
-                                getCapteurAll();
+                                getArticlesAll();
                         }
                         break;
 
