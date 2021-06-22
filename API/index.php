@@ -72,6 +72,7 @@ function addArticle(){
                 $Article_SousTitre = $decoded['Art_SousTitre'];
                 $Article_Autheur = $decoded['Art_Autheur'];
                 $Categorie_id = $decoded['Cat_Id'];
+
                
              
 
@@ -107,19 +108,22 @@ function updateArticle($id){
                 $Article_Contenu = $decoded['Art_Contenu'];
                 $Article_SousTitre = $decoded['Art_SousTitre'];
                 $Categorie_id = $decoded['Cat_Id'];
+                date_default_timezone_set('Europe/Paris');
+                $DateMaj=  date("Y-m-d H:i:s");
+                echo $DateMaj;
                
 
-    $query= mysqli_prepare($conn, "UPDATE article SET Art_Titre =?, Art_Contenu=?, Art_SousTitre=? WHERE Cat_Id=?");
-    mysqli_stmt_bind_param($query, "sssi", $Article_titre, $Article_Contenu, $Article_SousTitre, $Categorie_id);
+    $query= mysqli_prepare($conn, "UPDATE article SET Art_Titre =?, Art_Contenu=?, Art_SousTitre=?, Cat_Id=?, Art_Maj=? WHERE Art_Id=?");
+    mysqli_stmt_bind_param($query, "sssisi", $Article_titre, $Article_Contenu, $Article_SousTitre,  $Categorie_id, $DateMaj,$id);
 
     if($conn)
-     {
-        mysqli_stmt_execute($query);
-            $response=array(
+        {
+                mysqli_stmt_execute($query);
+                 $response=array(
                     'status' => 1,
                     'status_message' =>'Article mis a jour avec succes.'
-             );
-    }
+                );
+        }
     else
      {
             $response=array(
