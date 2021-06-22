@@ -146,6 +146,7 @@ function deleteArticle($id){
 
     if($conn)
     {
+        mysqli_stmt_execute($query);       
             $response=array(
                     'status' => 1,
                     'status_message' =>'Capteur supprimé avec succès.'
