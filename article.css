@@ -39,15 +39,15 @@ nav .menu h3 .nav-link{
     height: 120px; 
     background: gray;
 }
-h2{
+.galerie h2{
     text-align: center;
     color: black
 }
-h4 {
+.galerie h4 {
     text-align: center;
     color: gray
 }
-p{
+.galerie p{
     margin-left: auto;
     margin-right: auto;
     width: 900px;
