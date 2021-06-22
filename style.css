@@ -1,24 +1,507 @@
 @charset "utf-8";
-.nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 34%;
-    height: 100%;
-    background-color: grid;
-    color: #fff;
-    padding: 1%;
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:gray;
+	color:#fff;
+	padding:1%;
 }
-nav div.menu {
-    padding-left: 10%;
-    margin-top: 20px;
-	color: #fff;
-    text-decoration: none;
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
 }
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
 div.menu h3 {
-    margin: 0;
-    position: relative;
-    margin-top: 20px;
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
+}
+nav { 
+	position:fixed;
+	top:0; left:0; width:34%; 	
+	height:100%; 
+	background-color:rgba(255,97,37,1.00);
+	color:#fff;
+	padding:1%;
+}
+
+nav div.menu { 
+	padding-left:10%;
+	margin-top:20px;
+}
+nav div.menu * { 
+	color:#fff; text-decoration: none;
+}
+
+nav div.menu h3::before { 
+	color:#fff; text-decoration: none;
+}
+
+div.menu h3 {
+	margin:0; position:relative; margin-top:20px;
 }
 .card {
 	position: relative;
