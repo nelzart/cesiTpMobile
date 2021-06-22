@@ -137,14 +137,14 @@ function updateArticle($id){
 function deleteArticle($id){
 
     global $conn;
-    $query = mysqli_prepare($conn, "DELETE FROM articles WHERE Art_Id = ?");
+    $query = mysqli_prepare($conn, "DELETE FROM article WHERE Art_Id = ?");
     mysqli_stmt_bind_param($query, "i", $id);
 
     if($conn)
     {
             $response=array(
                     'status' => 1,
-                    'status_message' =>'Capteur supprimé avec succes.'
+                    'status_message' =>'Capteur supprimé avec succès.'
              );
      }
      else
