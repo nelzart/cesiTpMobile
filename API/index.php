@@ -140,7 +140,7 @@ function deleteArticle($id){
     $query = mysqli_prepare($conn, "DELETE FROM articles WHERE Art_Id = ?");
     mysqli_stmt_bind_param($query, "i", $id);
 
-    if(mysqli_query($conn, $query))
+    if($conn)
     {
             $response=array(
                     'status' => 1,
