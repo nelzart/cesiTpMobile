@@ -1,4 +1,9 @@
-@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
 h1 {
 	color: #fff;
 	font-variant: small-caps;
@@ -58,7 +63,7 @@ div.menu h3 {
 	font-family: "Raleway", sans-serif;
 	font-size: 16px;
 	font-weight: 700;
-	color: gray;
+	color: #fff;
 	white-space: nowrap;
 	transition: 0.3s;
   }
