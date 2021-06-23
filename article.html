@@ -3,67 +3,85 @@
 <head>
 <meta charset="utf-8">
  <!-- Compiled and minified CSS -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/
-css/materialize.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="article.css">
 <title> Blog des DI </title>
 </head>
 
-<body>
-	
-	<i id="burger" class="hide-on-med-and-up show-on-small show-on-medium" 
-onclick="burger()">
+<body>	
+
+	<i id="burger" class="hide-on-med-and-up show-on-small show-on-medium" onclick="burger()">
 		<div class="sandwich">
 			<div class=""></div>
 			<div class=""></div>
 			<div class=""></div>
 		</div>
 	</i>
-		<i id="quit" class="material-icons" onclick="quit()">arrow_back</i>
-		<div id="links" style="position:fixed">
-			
-			<div class="menu">
-				<h5><a class="nav-link" href="#"><span class="material-icons">home
+	<i id="quit" class="material-icons" onclick="quit()">arrow_back</i>
+	<div id="links" style="position:fixed">
+		<div class="menu">
+			<h5><a class="nav-link" href="index.html"><span class="material-icons">home</span>HOMEPAGE</a><span class="navActive"></span></h5>
+			<h5><a class="nav-link" href="creation.html"><span class="material-icons">add</span>CREER UN ARTICLE</a></h5>
+			<h5><a class="nav-link" href="profil.html"><span class="material-icons">account_circle</span>MON PROFIL</a></h5>
+		</div>
+	</div>
 
-				</span>HOMEPAGE</a><span class="navActive"></span></h5>
-				<h5><a class="nav-link" href=""><span class="material-icons">add  
+	<div class="row">	
+		<div id="myUser">	
+			<div id="hour"></div>
+			<div id="message"></div>
+		</div>
+	<div class="hide-on-med-and-down">
+	<nav class="col m2 s12">
+		
+		<div class="menu">
+			<h5><a class="nav-link" href="index.html"><span class="material-icons">home</span>HOMEPAGE</a><span class="navActive"></span></h5>
+			<h5><a class="nav-link" href="creation.html"><span class="material-icons">add</span>CREER UN ARTICLE</a></h5>
+			<h5><a class="nav-link" href="profil.html"><span class="material-icons">account_circle</span>MON PROFIL</a></h5>
+		</div></div>
+	</nav>			
 
-				</span>CREER UN ARTICLE</a></h5>
-				<h5><a class="nav-link" href="#"><span 
-class="material-icons">account_circle</span>MON PROFIL</a></h3>
+<div class="hide-on-med-and-down">
+	<div class="col m8 offset-m3">	
+		<span id="myCategory">
+			<a class="material-icons large" href="index.html">arrow_back</a>
+				<input class="input-field col s3" placeholder="Rechercher" id="site-search" type="search">
+				<a class="search waves-effect waves-light btn"><span class="material-icons">search</span></a>
+		</span>	
+
+		<div class="article">
+			<img src="./img/panda.jpg">
+					<h2>Je suis un titre et je t'emmerde</h2>
+					<h4>par Pasmoi - le 22-06-2021 à 16:11</h4>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis tempor mauris. Duis vel arcu eget ligula maximus vestibulum sed in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sollicitudin, eros id convallis convallis, sem arcu congue ex, at sollicitudin leo nulla in ante. Vivamus eleifend, est quis posuere mollis, elit elit luctus magna, in tristique tellus massa sit amet lorem. Aenean fermentum erat id luctus euismod. Nullam blandit porta neque pretium condimentum. Mauris id gravida mauris. Maecenas hendrerit nisi risus, sed porttitor neque placerat ac. Maecenas sit amet fermentum ipsum, non viverra metus. Nam condimentum lorem lectus, id sollicitudin mi rutrum ac. Fusce maximus tristique dolor quis feugiat. Aenean ipsum lorem, laoreet a magna vitae, faucibus dapibus sem. 
+					</p> 
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis tempor mauris. Duis vel arcu eget ligula maximus vestibulum sed in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sollicitudin, eros id convallis convallis, sem arcu congue ex, at sollicitudin leo nulla in ante. Vivamus eleifend, est quis posuere mollis, elit elit luctus magna, in tristique tellus massa sit amet lorem. Aenean fermentum erat id luctus euismod. Nullam blandit porta neque pretium condimentum. Mauris id gravida mauris. Maecenas hendrerit nisi risus, sed porttitor neque placerat ac. Maecenas sit amet fermentum ipsum, non viverra metus. Nam condimentum lorem lectus, id sollicitudin mi rutrum ac. Fusce maximus tristique dolor quis feugiat. Aenean ipsum lorem, laoreet a magna vitae, faucibus dapibus sem. Duis vel nisi facilisis, commodo justo nec, vulputate sem. Fusce pretium, ex euismod aliquet gravida, purus est hendrerit ipsum, ac vestibulum elit leo nec augue.
+					</p>
+					<p class="btn active right">Technologie</p>
+				</div>				
 			</div>
 		</div>
+	</div>
+</div>
 
-<div class="row">
-	
-	<nav class="col m2 s12">
-		<div id="hour"></div>
-		<div id="message"></div>
-		
-		<div class="hide-on-med-and-down">
-
-		<div class="menu">
-			<h5><a class="nav-link" href="#"><span class="material-icons">home</span> HOMEPAGE</a><span class="navActive"></span></h5>
-			<h5><a class="nav-link" href=""><span class="material-icons">add</span >CREER UN ARTICLE</a></h5>
-			<h5><a class="nav-link" href="#"><span 
-class="material-icons">account_circle</span>MON PROFIL</a></h3>
-		</div>
-	</nav>
-
-	<div class="col m9  offset-m1">
-		<span id="myCategory">
-			<a class="btn active" href="">Tout voir</a>
-			<a class="nonActive" href="">Technologie</a>
-			<a class="nonActive" href="">Humour</a>
-			<a class="nonActive" href="">Développement</a>
-			<a class="nonActive" href="">Réseau</a>
-				<input class="input-field col s3" placeholder="Rechercher" 
-id="site-search" type="search">
-				<a class="search waves-effect waves-light btn"><span 
-class="material-icons">search</span></a>
-		</span>
+<div class="hide-on-med-and-up show-on-small show-on-medium">
+	<div class="galeryOnMobile">
+		<div class="container">
+			<div class="galerytuile" href="article.css">					
+				<img src="./img/panda.jpg">
+					<div class="tuile-info">
+						<h2>je suis un titre</h2>
+						<span>oijfaoij</span>
+					</div>
+				<span class="myCard-categorie">catégorie</span>
+			</div>
+		</div>		
+	</div>
 
 
 
@@ -71,15 +89,16 @@ class="material-icons">search</span></a>
     <div class="icon">
 
     </div>
-    <div class="bandeau"></div>
-    <h2>JE SUIS UN TITRE ET JE T'EMMERDE</h2> 
-    <h4>par Pasmoi  la 22-06-2021 à 16:11</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis tempor mauris. Duis vel arcu eget ligula maximus vestibulum sed in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sollicitudin, eros id convallis convallis, sem arcu congue ex, at sollicitudin leo nulla in ante. Vivamus eleifend, est quis posuere mollis, elit elit luctus magna, in tristique tellus massa sit amet lorem. Aenean fermentum erat id luctus euismod. Nullam blandit porta neque pretium condimentum. Mauris id gravida mauris. Maecenas hendrerit nisi risus, sed porttitor neque placerat ac. Maecenas sit amet fermentum ipsum, non viverra metus. Nam condimentum lorem lectus, id sollicitudin mi rutrum ac. Fusce maximus tristique dolor quis feugiat. Aenean ipsum lorem, laoreet a magna vitae, faucibus dapibus sem. Duis vel nisi facilisis, commodo justo nec, vulputate sem. Fusce pretium, ex euismod aliquet gravida, purus est hendrerit ipsum, ac vestibulum elit leo nec augue.</p>
+
+
+
+
+
 </div>
+
 </body>
 </html>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.
-min.js"></script>
+ <!-- Compiled and minified JavaScript -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="app.js"></script>

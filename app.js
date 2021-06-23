@@ -47,12 +47,12 @@ M.AutoInit();
     }
 
 
-let listItems = document.querySelectorAll('a#myBtn');
+// let listItems = document.querySelectorAll('a#myBtn');
 
-for(let i = 0; i < listItems.length; i++){
-    listItems[i].addEventListener('click', function() {
-      this.classList.add("active");
-      let changeButton = document.getElementById('myBtn').className;
-      changeButton.classList.add('btn');
-    });
-} console.log(listItems);
+// for(let i = 0; i < listItems.length; i++){
+//     listItems[i].addEventListener('click', function() {
+//       this.classList.add("active");
+//       let changeButton = document.getElementById('myBtn').className;
+//       changeButton.classList.add('btn');
+//     });
+// } console.log(listItems);
