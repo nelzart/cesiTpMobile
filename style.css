@@ -282,14 +282,9 @@ opacity: 0.49; */
 
  */
 
- .mybody{
-	background-color: #EFEFEF;
-	height: 100vh;
- }
 .galeryOnMobile {
 	background-color: white;
-	position: relative;
-	top: 140px;
+	margin-top: 150px;
 	height: 100vh;
 	border-radius: 20px;
 }
