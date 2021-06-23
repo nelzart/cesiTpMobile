@@ -3,6 +3,12 @@ body {
 	padding: 10;
 	color: #444444;
 }
+@media only screen and (max-width: 992px) {
+	
+	body {
+	background-color: #EFEFEF;
+	}	
+  }
 
 .sandwich {
     display: flex;
@@ -80,7 +86,7 @@ nav {
 	color: #444444;
 }
 
-.myUser {
+#myUser {
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
@@ -88,13 +94,13 @@ nav {
 	position:fixed;
 	z-index: 500;
 }
-.myUser #hour{
+#myUser #hour{
 	display: flex; 
 	position: relative;
 	font-size: 1.5em;
 }
 
-.myUser #message {
+#myUser #message {
 	display: flex; 
 	position: relative;
 	margin-top: 10px;
@@ -276,6 +282,10 @@ opacity: 0.49; */
 
  */
 
+ .mybody{
+	background-color: #EFEFEF;
+	height: 100vh;
+ }
 .galeryOnMobile {
 	background-color: white;
 	position: relative;

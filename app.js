@@ -28,6 +28,8 @@ M.AutoInit();
         let burger = document.getElementById('burger');
         let links = document.getElementById('links');
         let quit = document.getElementById('quit');
+
+        document.getElementById("myUser").style.display = "none";
         burger.style.padding = '5px 5px 200vh 200vw';
         links.style.display = 'flex';
         quit.style.display = 'inline';
@@ -38,6 +40,7 @@ M.AutoInit();
         let burger = document.getElementById('burger');
         let links = document.getElementById('links');
         let quit = document.getElementById('quit');
+        document.getElementById("myUser").style.display = "flex";
         burger.style.padding = '5px 5px 32px 32px';
         links.style.display = 'none';
         quit.style.display = 'none';
