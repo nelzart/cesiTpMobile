@@ -11,18 +11,40 @@
 </head>
 
 <body>
+	
+	<i id="burger" class="hide-on-med-and-up show-on-small show-on-medium" onclick="burger()">
+		<div class="sandwich">
+			<div class=""></div>
+			<div class=""></div>
+			<div class=""></div>
+		</div>
+	</i>
+		<i id="quit" class="material-icons" onclick="quit()">arrow_back</i>
+		<div id="links" style="position:fixed">
+			
+			<div class="menu">
+				<h5><a class="nav-link" href="#"><span class="material-icons">home</span>HOMEPAGE</a><span class="navActive"></span></h5>
+				<h5><a class="nav-link" href=""><span class="material-icons">add</span>CREER UN ARTICLE</a></h5>
+				<h5><a class="nav-link" href="#"><span class="material-icons">account_circle</span>MON PROFIL</a></h3>
+			</div>
+		</div>
 
 <div class="row">
-	<nav class="col s2">
+	
+	<nav class="col m2 s12">
 		<div id="hour"></div>
 		<div id="message"></div>
+		
+		<div class="hide-on-med-and-down">
+
 		<div class="menu">
-			<h5><a class="nav-link" href="#"><span class="material-icons">home</span>HOMEPAGE</a></h5>
+			<h5><a class="nav-link" href="#"><span class="material-icons">home</span>HOMEPAGE</a><span class="navActive"></span></h5>
 			<h5><a class="nav-link" href=""><span class="material-icons">add</span>CREER UN ARTICLE</a></h5>
 			<h5><a class="nav-link" href="#"><span class="material-icons">account_circle</span>MON PROFIL</a></h3>
 		</div>
 	</nav>
-	<div class="col s9 offset-s1">
+
+	<div class="col m9  offset-m1">
 		<span id="myCategory">
 			<a class="btn active" href="">Tout voir</a>
 			<a class="nonActive" href="">Technologie</a>
@@ -34,22 +56,62 @@
 		</span>
 
 
-		<div class="container">
-			
+
+		<div class="galery">
+				<div class="galeryCard">					
+					<img src="./img/panda.jpg">
+						<div class="item-info">
+							<h2>je suis un titre</h2>
+							<span>oijfaoij</span>
+						</div>
+					<span class="myCard-categorie">catégorie</span>
+				</div>
+				<div class="galeryCard">					
+					<img src="./img/panda.jpg">
+						<div class="item-info">
+							<h2>je suis un titre</h2>
+							<span>oijfaoij</span>
+						</div>
+					<span class="myCard-categorie">catégorie</span>
+				</div>
+				<div class="galeryCard">					
+					<img src="./img/panda.jpg">
+						<div class="item-info">
+							<h2>je suis un titre</h2>
+							<span>oijfaoij</span>
+						</div>
+					<span class="myCard-categorie">catégorie</span>
+				</div>
+				<div class="galeryCard">					
+					<img src="./img/panda.jpg">
+						<div class="item-info">
+							<h2>je suis un titre</h2>
+							<span>oijfaoij</span>
+						</div>
+					<span class="myCard-categorie">catégorie</span>
+				</div>
+				<div class="galeryCard">					
+					<img src="./img/panda.jpg">
+						<div class="item-info">
+							<h2>je suis un titre</h2>
+							<span>oijfaoij</span>
+						</div>
+					<span class="myCard-categorie">catégorie</span>
+				</div>
+				<div class="galeryCard">					
+					<img src="./img/panda.jpg">
+						<div class="item-info">
+							<h2>je suis un titre</h2>
+							<span>oijfaoij</span>
+						</div>
+					<span class="myCard-categorie">catégorie</span>
+				</div>
+
+			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>
-
-
-<!--on commence par cloner un repository dans le fichier voulu
-
-on lance un "git pull" //pour recuperer les fichiers courants 
-
-git commit -a -m "comment" //on ajoute et enregistre les modifications
-
-git push ----> 
 
  <!-- Compiled and minified JavaScript -->
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
