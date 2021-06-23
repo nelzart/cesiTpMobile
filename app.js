@@ -23,21 +23,22 @@ M.AutoInit();
         document.getElementById('message').innerHTML += message = "<b>Bonne nuit, </b>" +connUserName
     }
 
+    // Menu mobile
     function burger() {
         let burger = document.getElementById('burger');
         let links = document.getElementById('links');
         let quit = document.getElementById('quit');
-        burger.style.padding = '16px 16px 200vh 200vw';
+        burger.style.padding = '5px 5px 200vh 200vw';
         links.style.display = 'flex';
         quit.style.display = 'inline';
-      }
-      
+    }
+
       // premet de quitter le menu burger sur la version mobile. 
-      function quit() {
+    function quit() {
         let burger = document.getElementById('burger');
         let links = document.getElementById('links');
         let quit = document.getElementById('quit');
         burger.style.padding = '5px 5px 32px 32px';
         links.style.display = 'none';
         quit.style.display = 'none';
-      }
+    }

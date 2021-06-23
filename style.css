@@ -173,6 +173,7 @@ input .input-field
 }
 
 .galeryCard img{
+	position: absolute;
 	width: 389px;
 	height: 340px;
 	object-fit: cover;
@@ -181,15 +182,16 @@ input .input-field
 
 .item-info{
 	display: flex; 
-	position: absolute;
-	background:rgba(0,0,0,0.6);
-    color: #fff;
+	position: relative;
+	border-radius: 20px;
 	font-weight: bold;
 	font-variant: small-caps;
 	flex-direction: column; 
 	flex-wrap: wrap; 
 	justify-content: center; 
 	align-items: center; 
+    color: #fff;	
+	background:rgba(0,0,0,0.6);
 	width: 389px;
 	height: 340px;
 }
