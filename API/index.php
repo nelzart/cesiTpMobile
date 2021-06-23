@@ -17,6 +17,20 @@ function getArticlesAll(){
 
 }
 
+function getCategoriesAll(){
+        global $conn;
+        $query = "SELECT * FROM categoriearticle ORDER BY Cat_Libelle DESC";
+        $response = array();
+        $result = mysqli_query($conn, $query);
+        while($row = mysqli_fetch_array($result))
+        {
+                $response[] = $row;
+        }
+        header('Content-Type: application/json');
+        echo json_encode($response, JSON_PRETTY_PRINT);
+    
+}
+
 function getArticlesbyCategorie($catId){
     global $conn;
     $query = "SELECT * FROM article WHERE Cat_Id=".$catId." ORDER BY Art_Maj DESC";
