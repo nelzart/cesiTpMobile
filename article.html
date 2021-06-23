@@ -2,37 +2,70 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="article.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,
-400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" 
-rel="stylesheet">
+ <!-- Compiled and minified CSS -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/
+css/materialize.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 <title> Blog des DI </title>
 </head>
 
 <body>
-<nav>
-  <div id="hour"></div>
-  <div class="menu">
-			<h3><a class="nav-link" href="#">HOMEPAGE</a></h3>
-			<h3><a class="nav-link" href="">CRER UN ARTICLE</a></h3>
-			<h3><a class="nav-link" href="#">MON PROFIL</a></h3>
-	</div>
-</nav>
+	
+	<i id="burger" class="hide-on-med-and-up show-on-small show-on-medium" 
+onclick="burger()">
+		<div class="sandwich">
+			<div class=""></div>
+			<div class=""></div>
+			<div class=""></div>
+		</div>
+	</i>
+		<i id="quit" class="material-icons" onclick="quit()">arrow_back</i>
+		<div id="links" style="position:fixed">
+			
+			<div class="menu">
+				<h5><a class="nav-link" href="#"><span class="material-icons">home</
+span>HOMEPAGE</a><span class="navActive"></span></h5>
+				<h5><a class="nav-link" href=""><span class="material-icons">add</
+span>CREER UN ARTICLE</a></h5>
+				<h5><a class="nav-link" href="#"><span 
+class="material-icons">account_circle</span>MON PROFIL</a></h3>
+			</div>
+		</div>
+
+<div class="row">
+	
+	<nav class="col m2 s12">
+		<div id="hour"></div>
+		<div id="message"></div>
+		
+		<div class="hide-on-med-and-down">
+
+		<div class="menu">
+			<h5><a class="nav-link" href="#"><span class="material-icons">home</span> HOMEPAGE</a><span class="navActive"></span></h5>
+			<h5><a class="nav-link" href=""><span class="material-icons">add</span >CREER UN ARTICLE</a></h5>
+			<h5><a class="nav-link" href="#"><span 
+class="material-icons">account_circle</span>MON PROFIL</a></h3>
+		</div>
+	</nav>
+
+	<div class="col m9  offset-m1">
+		<span id="myCategory">
+			<a class="btn active" href="">Tout voir</a>
+			<a class="nonActive" href="">Technologie</a>
+			<a class="nonActive" href="">Humour</a>
+			<a class="nonActive" href="">Développement</a>
+			<a class="nonActive" href="">Réseau</a>
+				<input class="input-field col s3" placeholder="Rechercher" 
+id="site-search" type="search">
+				<a class="search waves-effect waves-light btn"><span 
+class="material-icons">search</span></a>
+		</span>
+
+
 
 <div class="galerie">
-	<div id="navbar" class="navbar">
-		<ul>
-			<li><a class="nav-link scrollto active" href="">TOUT VOIR</a></li>
-			<li><a class="nav-link scrollto" href="">TECHNOLOGY</a></li>
-			<li><a class="nav-link scrollto" href="">HUMOUR</a></li>
-			<li><a class="nav-link scrollto" href="">DEVELOPPEMENT</a></li>
-			<li><a class="nav-link scrollto" href="">RESEAU</a></li>
-			<input type="search" id="site-search" name="q"
-       		aria-label="Search through site content">
-			<button>Recherche</button>
-		</ul>
-	</div>
     <div class="icon">
 
     </div>
@@ -40,3 +73,4 @@ rel="stylesheet">
     <h2>JE SUIS UN TITRE ET JE T'EMMERDE</h2>
     <h4>par Pasmoi  la 22-06-2021 à 16:11</h4>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis tempor mauris. Duis vel arcu eget ligula maximus vestibulum sed in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris sollicitudin, eros id convallis convallis, sem arcu congue ex, at sollicitudin leo nulla in ante. Vivamus eleifend, est quis posuere mollis, elit elit luctus magna, in tristique tellus massa sit amet lorem. Aenean fermentum erat id luctus euismod. Nullam blandit porta neque pretium condimentum. Mauris id gravida mauris. Maecenas hendrerit nisi risus, sed porttitor neque placerat ac. Maecenas sit amet fermentum ipsum, non viverra metus. Nam condimentum lorem lectus, id sollicitudin mi rutrum ac. Fusce maximus tristique dolor quis feugiat. Aenean ipsum lorem, laoreet a magna vitae, faucibus dapibus sem. Duis vel nisi facilisis, commodo justo nec, vulputate sem. Fusce pretium, ex euismod aliquet gravida, purus est hendrerit ipsum, ac vestibulum elit leo nec augue.</p>
+</div>
