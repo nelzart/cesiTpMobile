@@ -37,3 +37,36 @@
     margin-right: 40px;
     max-width: 100%;
 }
+
+.articletuile{
+	display: flex; 
+	position: relative;
+	border-radius: 18px;
+    margin-top: -100px;
+	flex-wrap: wrap; 
+	justify-content: center; 
+	align-items: center; 
+	background:rgba(255, 255, 255, 1);
+	height: 100%;
+	width: 100%;
+}
+
+.articletuile h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    color: #444444
+}
+.articletuile h4 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    color: #444444;
+}
+.articletuile p{
+    margin-left: 40px;
+    margin-right: 40px;
+    max-width: 100%;
+}
