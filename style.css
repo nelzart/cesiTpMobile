@@ -192,6 +192,8 @@ input .input-field
 	width: 389px;
 	height: 340px;
 	margin: 10px;
+	border-radius: 20px;
+	transition: box-shadow 0.3s ease-in-out;
 }
 
 .galeryCard img{
@@ -200,6 +202,15 @@ input .input-field
 	height: 340px;
 	object-fit: cover;
 	border-radius: 20px;
+}
+.galeryCard:hover {
+	box-shadow:  0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);;
+	/* box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%), 0 9px 46px 8px rgb(0 0 0 / 12%), 0 11px 15px -7px rgb(0 0 0 / 20%);	 */
+}
+.galeryCard:after {
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
 }
 
 .item-info{
@@ -283,7 +294,7 @@ opacity: 0.49; */
  */
 
 .galeryOnMobile {
-	background-color: blue;
+	background-color: white;
 	margin-top: 150px;
 	border-radius: 20px;
 	display: flex;
@@ -294,7 +305,10 @@ opacity: 0.49; */
 	border-radius: 18px;
 	margin-top: 20px;
 	margin-bottom: 10px;	
+
 }
+
+
 
 .galerytuile h2{
 	font-size: 250%;
@@ -326,3 +340,4 @@ opacity: 0.49; */
 	height: 100%;
 	width: 100%;
 }
+
