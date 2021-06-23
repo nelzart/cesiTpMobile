@@ -70,3 +70,15 @@
     margin-right: 40px;
     max-width: 100%;
 }
+
+
+.create-myart form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EFEFEF;
+    padding: 50px;
+    border-radius: 20px;
+}
+
