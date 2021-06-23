@@ -67,6 +67,7 @@ body {
   }
 
 nav {
+	position: fixed;
 	display: flex;
 	flex-direction: column;
 	background-color: #EFEFEF;
@@ -177,6 +178,7 @@ input .input-field
 	object-fit: cover;
 	border-radius: 20px;
 }
+
 .item-info{
 	display: flex; 
 	position: absolute;
