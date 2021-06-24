@@ -149,19 +149,38 @@ function getArticleById(){
             var artAutheur = data[0].Art_Autheur  
             var artCategorie = data[0].Cat_Libelle 
             var artContenu = data[0].Art_Contenu
-            
-            var parent = document.getElementsByClassName("article")
+
+            var parent = document.getElementsByClassName("article")[0]
             var newDiv =  document.createElement("div");
             newDiv.innerHTML = '\
-            <img "src=img/panda.jpg">\
+            <img src="img/panda.jpg">\
            <h2>'+artTitre+'</h2>\
-           <h2>'+artAutheur+'+' - '+'+artMaj+'</h2>\
+           <h4>'+artAutheur+' - '+artMaj+'</h4>\
            <p>'+artContenu+'</p>\
            <p class="btn active right">'+artCategorie+'</p>\
            </div>\
       ';
       parent.append(newDiv)
       
+      var artId = data[0].Art_Id
+      var artDateCreation = data[0].Art_DateCreation 
+      var artMaj = data[0].Art_Maj  
+      var artTitre = data[0].Art_Titre 
+      var artAutheur = data[0].Art_Autheur  
+      var artCategorie = data[0].Cat_Libelle 
+      var artContenu = data[0].Art_Contenu
+      
+      var parent = document.getElementsByClassName("hide-on-med-and-up show-on-small show-on-medium")[0]
+      var newDiv2 =  document.createElement("div");
+      newDiv2.innerHTML = '\
+      <div class="articletuile">\
+     <h2>'+artTitre+'</h2>\
+     <h4>'+artAutheur+' - '+artMaj+'</h4>\
+     <p>'+artContenu+'</p>\
+     <p class="btn active right">'+artCategorie+'</p>\
+     </div>\
+';
+parent.append(newDiv2)
 
     }
 
