@@ -62,7 +62,9 @@ function getArticlesbyTitre($titre){
 
 function getArticleById($id){
         global $conn;
-        $query = "SELECT * FROM article where Art_Id=".$id;
+        $query = "SELECT * FROM article a INNER JOIN catagoriearticle c ON a.cat_Id= c.Cat_Id where Art_Id=".$id;
+
+
         $response = array();
         $result = mysqli_query($conn, $query);
         while($row = mysqli_fetch_array($result))

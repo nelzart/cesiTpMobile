@@ -60,7 +60,7 @@ var getHttpRequest = function(){
             var newDiv =  document.createElement("a");
             newDiv.setAttribute("href","article.html?id="+artId)
             newDiv.innerHTML = '\
-            <div class="galeryCard">\
+            <div class="galeryCard" id="'+artId+'">\
             <img src="./img/panda.jpg">\
             <div class="item-info">\
               <h2>'+artTitre+'</h2>\
@@ -75,7 +75,7 @@ var getHttpRequest = function(){
       var newDiv2 =  document.createElement("a");
       newDiv2.setAttribute("href","article.html?id="+artId)
       newDiv2.innerHTML = '\
-      <div class="galerytuile" >	\
+      <div class="galerytuile" id="'+artId+'">	\
       <img src="./img/panda.jpg">\
       <div class="tuile-info">\
         <h2>'+artTitre+'</h2>\
@@ -94,7 +94,7 @@ parent2.append(newDiv2)
   }      
 
 function createArticle(){
-console.log("toto")
+
    // On enregistre les données dans des variables respectives
   var AddData_Titre = document.getElementById("titre_article").value
   var AddData_Contenu = document.getElementById("createarticle").value
@@ -105,7 +105,7 @@ console.log("toto")
 
   AddData.Art_Titre = AddData_Titre
   AddData.Art_Contenu = AddData_Contenu
-  AddData.Art_SousTitre = "toto"
+  AddData.Art_SousTitre = "--"
   AddData.Cat_Id = AddData_Categorie
   AddData.Art_Autheur = "Fred"
 
@@ -123,11 +123,51 @@ console.log("toto")
    .then(data => console.log(data)) // ON AFFICHE LE SUCCÉS DANS LA CONSOLE
    .catch(err => console.log(err)) // ON AFFICHE UN MESSAGE D'ERREUR
 
-
-
 }
 
+function getArticleById(){
+  var url = window.location.toString(); 
+  var decoupe = url.split("id=");
+  var id = decoupe[1]
+  var url_id = "http://localhost/tpMobile2/cesiTpMobile/API/index.php?id="+id //et au fait pense à changer l'url !!!!
+  
+  var httpRequest = getHttpRequest()
+   
+    httpRequest.onreadystatechange = function(){
+      
 
+      if(httpRequest.readyState === 4){
+
+        var data = JSON.parse(httpRequest.responseText)
+
+      console.log (data)
+          
+            var artId = data[i].Art_Id
+            var artDateCreation = data[i].Art_DateCreation 
+            var artMaj = data[i].Art_Maj  
+            var artTitre = data[i].Art_Titre 
+            var artAutheur = data[i].Art_Autheur  
+            var artCategorie = data[i].Cat_Libelle 
+            var artContenu = data[i].Art_Contenu
+            
+            var parent = document.getElementsByClassName("article")
+            var newDiv =  document.createElement("div");
+            newDiv.innerHTML = '\
+            <img "src=img/panda.jpg">\
+           <h2>'+artTitre+'</h2>\
+           <h2>'+artAutheur+'+' - '+'+artMaj+'</h2>\
+           <p>'+artContenu+'</p>\
+           <p class="btn active right">'+artCategorie+'</p>\
+           </div>\
+      ';
+      parent.append(newDiv)
+      
+
+    }
+    httpRequest.open('GET', url_id, true)
+    httpRequest.send()
+  }
+}
  
   /*createArticle();*/
   /*document.getElementsByClassName('btn left');    // On récupère l'élément sur lequel on veut détecter le clic
