@@ -57,23 +57,25 @@ var getHttpRequest = function(){
             var artCategorie = data[i].Cat_Id 
             
             var parent = document.getElementsByClassName("galery")[0]
-            var newDiv =  document.createElement("div ");
+            var newDiv =  document.createElement("a");
+            newDiv.setAttribute("href","article.html?id="+artId)
             newDiv.innerHTML = '\
-            <a href="article.html?id='+artId+'"><div class="galeryCard">  \
+            <div class="galeryCard">\
             <img src="./img/panda.jpg">\
             <div class="item-info">\
               <h2>'+artTitre+'</h2>\
               <span>'+artAutheur+'</span>\
             </div>\
           <span class="myCard-categorie">'+artCategorie+'</span>\
-        </div></a>\
+        </div>\
       ';
       parent.append(newDiv)
       
-      var parent2 = document.getElementsByClassName("galeryOnMobile")[0]
-      var newDiv2 =  document.createElement("div");
-      newDiv.innerHTML = '\
-      <div class="container" >	\
+      var parent2 = document.getElementsByClassName("container")[0]
+      var newDiv2 =  document.createElement("a");
+      newDiv2.setAttribute("href","article.html?id="+artId)
+      newDiv2.innerHTML = '\
+      <div class="galerytuile" >	\
       <img src="./img/panda.jpg">\
       <div class="tuile-info">\
         <h2>'+artTitre+'</h2>\
@@ -82,7 +84,7 @@ var getHttpRequest = function(){
     <span class="myCard-categorie">'+artCategorie+'</span>\
   </div>\
 ';
-parent2.append(newDiv2)*/
+parent2.append(newDiv2)
           }
       }
 
