@@ -1,4 +1,4 @@
-console.log("hello"); 
+
 
 var getHttpRequest = function(){
     var httpRequest = false;
@@ -32,14 +32,14 @@ var getHttpRequest = function(){
   
   
   getArticlesAll = function(){
-    console.log ("bonjour")
+
     var url_id = "http://localhost/tpMobile2/cesiTpMobile/API/index.php" //et au fait pense à changer l'url !!!!
   
     var httpRequest = getHttpRequest()
    
     httpRequest.onreadystatechange = function(){
       
-      console.log ("bonjour2")
+
       if(httpRequest.readyState === 4){
 
         var data = JSON.parse(httpRequest.responseText)
@@ -69,7 +69,19 @@ var getHttpRequest = function(){
       ';
       parent.append(newDiv)
       
-
+      var parent = document.getElementsByClassName("galeryOnMobile")[0]
+      var newDiv =  document.createElement("div");
+      newDiv.innerHTML = '\
+      <div class="container" href="article.html?id='+artId+'" >	\
+      <img src="./img/panda.jpg">\
+      <div class="item-info">\
+        <h2>'+artTitre+'</h2>\
+        <span>'+artAutheur+'</span>\
+      </div>\
+    <span class="myCard-categorie">'+artCategorie+'</span>\
+  </div>\
+';
+parent.append(newDiv)
           }
       }
 
