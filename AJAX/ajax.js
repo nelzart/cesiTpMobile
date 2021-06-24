@@ -31,7 +31,7 @@ var getHttpRequest = function(){
   // ---------------------   FONCTION recup de tous les articles ------------------------------------
   
   
-  getArticlesAll = function(){
+  function getArticlesAll(){
 
     var url_id = "http://localhost/tpMobile2/cesiTpMobile/API/index.php" //et au fait pense à changer l'url !!!!
   
@@ -93,8 +93,8 @@ parent2.append(newDiv2)
     httpRequest.send()
   }      
 
- createArticle = function(){
-
+function createArticle(){
+console.log("toto")
    // On enregistre les données dans des variables respectives
   var AddData_Titre = document.getElementById("titre_article").value
   var AddData_Contenu = document.getElementById("createarticle").value
@@ -107,7 +107,7 @@ parent2.append(newDiv2)
   AddData.Art_Contenu = AddData_Contenu
   AddData.Art_SousTitre = "toto"
   AddData.Cat_Id = AddData_Categorie
-  AddData.Cat_Autheur = "Fred"
+  AddData.Art_Autheur = "Fred"
 
   const POSTMethod = {
       method: 'POST', // MethodE POST
@@ -128,7 +128,8 @@ parent2.append(newDiv2)
 }
 
 
-  getArticlesAll();
+ 
+  /*createArticle();*/
   /*document.getElementsByClassName('btn left');    // On récupère l'élément sur lequel on veut détecter le clic
   addEventListener('click', createArticle());*/
    
