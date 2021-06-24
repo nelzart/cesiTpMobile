@@ -55,33 +55,34 @@ var getHttpRequest = function(){
             var artTitre = data[i].Art_Titre 
             var artAutheur = data[i].Art_Autheur  
             var artCategorie = data[i].Cat_Id 
+            
             var parent = document.getElementsByClassName("galery")[0]
-            var newDiv =  document.createElement("div");
+            var newDiv =  document.createElement("div ");
             newDiv.innerHTML = '\
-            <div class="galeryCard" href="article.html?id='+artId+'" >	\
+            <a href="article.html?id='+artId+'"><div class="galeryCard">  \
             <img src="./img/panda.jpg">\
             <div class="item-info">\
               <h2>'+artTitre+'</h2>\
               <span>'+artAutheur+'</span>\
             </div>\
           <span class="myCard-categorie">'+artCategorie+'</span>\
-        </div>\
+        </div></a>\
       ';
       parent.append(newDiv)
       
-      var parent = document.getElementsByClassName("galeryOnMobile")[0]
-      var newDiv =  document.createElement("div");
+      var parent2 = document.getElementsByClassName("galeryOnMobile")[0]
+      var newDiv2 =  document.createElement("div");
       newDiv.innerHTML = '\
-      <div class="container" href="article.html?id='+artId+'" >	\
+      <div class="container" >	\
       <img src="./img/panda.jpg">\
-      <div class="item-info">\
+      <div class="tuile-info">\
         <h2>'+artTitre+'</h2>\
         <span>'+artAutheur+'</span>\
       </div>\
     <span class="myCard-categorie">'+artCategorie+'</span>\
   </div>\
 ';
-parent.append(newDiv)
+parent2.append(newDiv2)*/
           }
       }
 
@@ -90,41 +91,4 @@ parent.append(newDiv)
     httpRequest.send()
   }      
   getArticlesAll();
-    /*function GetDataArticle(idCartArticle){
-    var url_id2 = "http://localhost/tpMobile2/cesiTpMobile/API/index.php?id="+idCartArticle+""
-    var httpRequest = getHttpRequest()
    
-    httpRequest.onreadystatechange = function(){
-      
-
-      if(httpRequest.readyState === 4){
-
-        var data = JSON.parse(httpRequest.responseText)
-        var artTitre = data.map(function(elm){
-          return elm.Art_Titre
-        })
-        var artAutheur = data.map(function(elm){
-          return elm.Art_Autheur
-        })
-        var artCategorie = data.map(function(elm){
-          return elm.Cat_Id
-        })
-        var parent = document.getElementsByClassName("galery")
-        var newDiv =  document.createElement("div");
-        newDiv.innerHTML = '\
-        <div class="galeryCard" href="article.css">	\
-        <img src="./img/panda.jpg">\
-        <div class="item-info">\
-          <h2>'+artTitre+'</h2>\
-          <span>'+artAutheur+'</span>\
-        </div>\
-      <span class="myCard-categorie">'+artCategorie+'</span>\
-    </div>\
-  ';
-  parent.append(newDiv)
-      }
-      httpRequest.open('GET', url_id2, true)
-      httpRequest.send()
-    }
-  }
- window.onload = function(){/*DataNameLoad(); getArticlesAll();*/
