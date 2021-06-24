@@ -5,7 +5,8 @@ $request_method = $_SERVER['REQUEST_METHOD'];
 
 function getArticlesAll(){
     global $conn;
-    $query = "SELECT * FROM article ORDER BY Art_Maj DESC";
+    $query = "SELECT * FROM article a INNER JOIN catagoriearticle c ON a.cat_Id= c.Cat_Id ORDER BY Art_Maj DESC";
+
     $response = array();
     $result = mysqli_query($conn, $query);
     while($row = mysqli_fetch_array($result))

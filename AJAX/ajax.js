@@ -54,7 +54,7 @@ var getHttpRequest = function(){
             var artMaj = data[i].Art_Maj  
             var artTitre = data[i].Art_Titre 
             var artAutheur = data[i].Art_Autheur  
-            var artCategorie = data[i].Cat_Id 
+            var artCategorie = data[i].Cat_Libelle 
             
             var parent = document.getElementsByClassName("galery")[0]
             var newDiv =  document.createElement("a");
