@@ -44,7 +44,7 @@ var getHttpRequest = function(){
 
         var data = JSON.parse(httpRequest.responseText)
 
-      console.log (data)
+        console.log (data)
           for(i=0 ; i < data.length ; i++){
             // faire une requete pour recuperer infos des articles
             // Afficher les informations dans la page html
@@ -81,10 +81,10 @@ var getHttpRequest = function(){
         <h2>'+artTitre+'</h2>\
         <span>'+artAutheur+'</span>\
       </div>\
-    <span class="myCard-categorie">'+artCategorie+'</span>\
-  </div>\
-';
-parent2.append(newDiv2)
+      <span class="myCard-categorie">'+artCategorie+'</span>\
+    </div>\
+    ';
+    parent2.append(newDiv2)
           }
       }
 
@@ -142,13 +142,13 @@ function getArticleById(){
 
       console.log (data)
           
-            var artId = data[i].Art_Id
-            var artDateCreation = data[i].Art_DateCreation 
-            var artMaj = data[i].Art_Maj  
-            var artTitre = data[i].Art_Titre 
-            var artAutheur = data[i].Art_Autheur  
-            var artCategorie = data[i].Cat_Libelle 
-            var artContenu = data[i].Art_Contenu
+            var artId = data[0].Art_Id
+            var artDateCreation = data[0].Art_DateCreation 
+            var artMaj = data[0].Art_Maj  
+            var artTitre = data[0].Art_Titre 
+            var artAutheur = data[0].Art_Autheur  
+            var artCategorie = data[0].Cat_Libelle 
+            var artContenu = data[0].Art_Contenu
             
             var parent = document.getElementsByClassName("article")
             var newDiv =  document.createElement("div");
@@ -164,9 +164,10 @@ function getArticleById(){
       
 
     }
-    httpRequest.open('GET', url_id, true)
-    httpRequest.send()
+
   }
+  httpRequest.open('GET', url_id, true)
+  httpRequest.send()
 }
  
   /*createArticle();*/
