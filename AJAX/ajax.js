@@ -92,5 +92,43 @@ parent2.append(newDiv2)
     httpRequest.open('GET', url_id, true)
     httpRequest.send()
   }      
+
+ createArticle = function(){
+
+   // On enregistre les données dans des variables respectives
+  var AddData_Titre = document.getElementById("titre_article").value
+  var AddData_Contenu = document.getElementById("createarticle").value
+  var AddData_Categorie = 1/*document.getElementsByClassName("input-field").value*/
+
+   // utilisation du constructeur Object
+  var AddData = new Object(); 
+
+  AddData.Art_Titre = AddData_Titre
+  AddData.Art_Contenu = AddData_Contenu
+  AddData.Art_SousTitre = "toto"
+  AddData.Cat_Id = AddData_Categorie
+  AddData.Cat_Autheur = "Fred"
+
+  const POSTMethod = {
+      method: 'POST', // MethodE POST
+      headers: {
+      'Content-type': 'application/json; charset=UTF-8' // ON RENSEINGE LE HEAD DU HTML
+    },
+    body: JSON.stringify(AddData) // ON ENVOIE LES DATA SOUS FORMAT JSON
+  }
+   var url_adding = "http://localhost/tpMobile2/cesiTpMobile/API/index.php" 
+   // make the HTTP put request using fetch api
+   fetch(url_adding, POSTMethod)
+   .then(response => response.json())
+   .then(data => console.log(data)) // ON AFFICHE LE SUCCÉS DANS LA CONSOLE
+   .catch(err => console.log(err)) // ON AFFICHE UN MESSAGE D'ERREUR
+
+
+
+}
+
+
   getArticlesAll();
+  /*document.getElementsByClassName('btn left');    // On récupère l'élément sur lequel on veut détecter le clic
+  addEventListener('click', createArticle());*/
    
