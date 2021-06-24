@@ -32,13 +32,14 @@ var getHttpRequest = function(){
   
   
   getArticlesAll = function(){
+    console.log ("bonjour")
     var url_id = "http://localhost/tpMobile2/cesiTpMobile/API/index.php" //et au fait pense à changer l'url !!!!
   
     var httpRequest = getHttpRequest()
    
     httpRequest.onreadystatechange = function(){
       
-
+      console.log ("bonjour2")
       if(httpRequest.readyState === 4){
 
         var data = JSON.parse(httpRequest.responseText)
@@ -48,18 +49,36 @@ var getHttpRequest = function(){
             // faire une requete pour recuperer infos des articles
             // Afficher les informations dans la page html
             
-           var idCartArticle = data[i.Art_Id]
-           GetDataArticle(idCartArticle)
+            var artId = data[i].Art_Id
+            var artDateCreation = data[i].Art_DateCreation 
+            var artMaj = data[i].Art_Maj  
+            var artTitre = data[i].Art_Titre 
+            var artAutheur = data[i].Art_Autheur  
+            var artCategorie = data[i].Cat_Id 
+            var parent = document.getElementsByClassName("galery")[0]
+            var newDiv =  document.createElement("div");
+            newDiv.innerHTML = '\
+            <div class="galeryCard" href="article.html?id='+artId+'" >	\
+            <img src="./img/panda.jpg">\
+            <div class="item-info">\
+              <h2>'+artTitre+'</h2>\
+              <span>'+artAutheur+'</span>\
+            </div>\
+          <span class="myCard-categorie">'+artCategorie+'</span>\
+        </div>\
+      ';
+      parent.append(newDiv)
+      
 
           }
       }
-      httpRequest.open('GET', url_id, true)
-      httpRequest.send()
+
     }
-
+    httpRequest.open('GET', url_id, true)
+    httpRequest.send()
   }      
-
-    function GetDataArticle(idCartArticle){
+  getArticlesAll();
+    /*function GetDataArticle(idCartArticle){
     var url_id2 = "http://localhost/tpMobile2/cesiTpMobile/API/index.php?id="+idCartArticle+""
     var httpRequest = getHttpRequest()
    
@@ -96,4 +115,4 @@ var getHttpRequest = function(){
       httpRequest.send()
     }
   }
- window.onload = function(){/*DataNameLoad();*/ getArticlesAll();}
+ window.onload = function(){/*DataNameLoad(); getArticlesAll();*/
